@@ -1,0 +1,38 @@
+{
+  "name": "react-leaflet-google-mutant",
+  "version": "0.1.0",
+  "description": "A React component for rendering Google Map tile layers on a Leaflet map",
+  "main": "dist/index.js",
+  "repository": "git@github.com:Rennzie/react-leaflet-googlemutant.git",
+  "author": "Sean.Rennie <rnnsea001@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w"
+  },
+  "dependencies": {
+    "@react-leaflet/core": "^1.0.2",
+    "leaflet.gridlayer.googlemutant": "^0.11.3"
+  },
+  "peerDependencies": {
+    "leaflet": "^1.7.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^11.1.0",
+    "@types/leaflet": "^1.5.21",
+    "@types/leaflet.gridlayer.googlemutant": "^0.4.5",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "rollup": "^2.38.1",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "typescript": "^4.1.3"
+  },
+  "files": [
+    "dist"
+  ]
+}
