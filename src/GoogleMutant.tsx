@@ -6,22 +6,22 @@ import type { LeafletContextInterface } from '@react-leaflet/core';
 
 export type GoogleMapTypes = 'satellite' | 'terrain' | 'hybrid' | 'roadmap';
 
-export interface GoogleMutantProps extends GridLayerOptions {
+export interface GoogleLayerProps extends GridLayerOptions {
   type: GoogleMapTypes;
   /** The mutant container will add its own attribution anyways. */
   attribution?: string;
   continuousWorld?: boolean;
 }
 /**
- * Uses the GoogleMutant Leaflet plugin to create a googlemaps layer
+ * Uses the GoogleLayer Leaflet plugin to create a googlemaps layer
  * Requires the Google Maps JS API to be loaded as a script tag.
  *
  * All options except `opacity` and `zIndex` are immutable once the layer has loaded with the exception
  *
  * Docs for L.GridLayer.GoogleMutant https://gitlab.com/IvanSanchez/Leaflet.GridLayer.GoogleMutant
  */
-const GoogleMutant = createTileLayerComponent(
-  ({ ...options }: GoogleMutantProps, context: LeafletContextInterface) => ({
+const GoogleLayer = createTileLayerComponent(
+  ({ ...options }: GoogleLayerProps, context: LeafletContextInterface) => ({
     instance: L.gridLayer.googleMutant({
       ...options,
     }),
@@ -30,4 +30,4 @@ const GoogleMutant = createTileLayerComponent(
   updateGridLayer,
 );
 
-export default GoogleMutant;
+export default GoogleLayer;

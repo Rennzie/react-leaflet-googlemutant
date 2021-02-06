@@ -15,5 +15,5 @@ export default {
     },
   ],
   plugins: [nodeResolve(), typescript({ objectHashIgnoreUnknownHack: true })],
-  external: ['react', 'react-dom', 'leaflet'],
+  external: ['react', 'react-dom', 'leaflet', 'react-leaflet'],
 };
