@@ -1,0 +1,15 @@
+/.idea
+/node_modules
+/dist
+/tmp
+npm-debug.*
+/coverage
+.DS_Store
+package-lock.json
+yarn-error.log
+.env
+
+
+package.json
+
+
