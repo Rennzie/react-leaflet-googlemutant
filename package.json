@@ -1,6 +1,6 @@
 {
   "name": "react-google-layer-leaflet",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A React component for rendering Google Map tile layers on a Leaflet map",
   "main": "dist/index.js",
   "repository": "git@github.com:Rennzie/react-leaflet-googlemutant.git",
@@ -14,7 +14,8 @@
     "leaflet"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "clean": "rimraf dist",
+    "build": "yarn clean && rollup -c",
     "start": "rollup -c -w",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts,.tsx .",
     "prettier": "prettier --ignore-path .eslintignore --write \"./src/**/*.+(js|ts|json)\" ",
@@ -31,17 +32,18 @@
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.11.1",
     "@react-leaflet/core": "^1.0.2",
+    "@types/leaflet": "^1.5.21",
+    "@types/leaflet.gridlayer.googlemutant": "^0.4.5",
     "leaflet.gridlayer.googlemutant": "^0.11.3"
   },
   "peerDependencies": {
     "leaflet": "^1.7.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-leaflet": "^3.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^11.1.0",
-    "@types/leaflet": "^1.5.21",
-    "@types/leaflet.gridlayer.googlemutant": "^0.4.5",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.14.2",
@@ -57,6 +59,7 @@
     "lint-staged": "^10.5.4",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
     "rollup": "^2.38.1",
     "rollup-plugin-typescript2": "^0.29.0",
     "typescript": "^4.1.3"
