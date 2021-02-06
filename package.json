@@ -1,6 +1,6 @@
 {
   "name": "react-google-layer-leaflet",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A React component for rendering Google Map tile layers on a Leaflet map",
   "main": "dist/index.js",
   "repository": "git@github.com:Rennzie/react-leaflet-googlemutant.git",
